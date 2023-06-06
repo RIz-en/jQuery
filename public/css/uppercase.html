@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./output.css" />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=DynaPuff&display=swap");
+
+      * {
+        font-family: "DynaPuff", cursive;
+      }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+</head>
+<body>
+    <div class="grid h-screen place-items-center">
+        <textarea name="" id="textarea" cols="30" rows="10" class="shadow-md shadow-gray-600"></textarea>
+        <button class="py-2 px-4 text-white bg-red-500 rounded-md" id="button">Change</button>
+    </div>
+    <script>
+        $(document).ready(function(){
+            $('#button').click(function(){
+                let text = $('#textarea').val();
+                $('#textarea').val(text.toUpperCase());
+            })
+        })
+    </script>
+</body>
+</html>
